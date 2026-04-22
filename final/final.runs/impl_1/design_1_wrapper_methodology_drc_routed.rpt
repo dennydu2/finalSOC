@@ -1,0 +1,191 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Tue Apr 21 23:25:58 2026
+| Host         : mobile running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 28
++-----------+----------+-------------------------------+--------+
+| Rule      | Severity | Description                   | Checks |
++-----------+----------+-------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 1      |
+| TIMING-18 | Warning  | Missing input or output delay | 27     |
++-----------+----------+-------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encg/dout_reg[9]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/cnt_reg[1]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/cnt_reg[2]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/cnt_reg[3]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/cnt_reg[4]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[0]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[1]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[2]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[3]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[4]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[5]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[6]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[7]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[8]/CLR,
+design_1_i/pong_axi_0/inst/u_pong/hdmi_tx_0/encr/dout_reg[9]/CLR
+ (the first 15 of 42 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on UART_0_rxd relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on gpio_io_i_0[0] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on gpio_io_i_0[1] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on gpio_io_i_0[2] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on gpio_io_i_0[3] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on hdmi_reset relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on LED[0] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on LED[1] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on LED[2] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on LED[3] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on UART_0_txd relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_en_0_port_out_0[0] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_en_0_port_out_0[1] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_out_0_port_out_0[0] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_out_0_port_out_0[1] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_out_0_port_out_0[2] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_out_0_port_out_0[3] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_out_0_port_out_0[4] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_out_0_port_out_0[5] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P1_out_0_port_out_0[6] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P2_out_0_port_out_0[0] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P2_out_0_port_out_0[1] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P2_out_0_port_out_0[2] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P2_out_0_port_out_0[3] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P2_out_0_port_out_0[4] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P2_out_0_port_out_0[5] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on o_Seven_Seg_P2_out_0_port_out_0[6] relative to the rising and/or falling clock edge(s) of clk_100MHz.
+Related violations: <none>
+
+
