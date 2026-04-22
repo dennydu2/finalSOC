@@ -1,6 +1,12 @@
-verilog xil_defaultlib -i "../../../../../../../2025.1/Vivado/data/rsb/busdef" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" \
+verilog xil_defaultlib -i "C:/Xilinx/2025.1/Vivado/data/rsb/busdef" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+
+verilog xlconstant_v1_1_10 -i "C:/Xilinx/2025.1/Vivado/data/rsb/busdef" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" \
+"../../../../final.srcs/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+verilog xil_defaultlib -i "C:/Xilinx/2025.1/Vivado/data/rsb/busdef" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 verilog xil_defaultlib "glbl.v"

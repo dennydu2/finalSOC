@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 20 19:52:46 2026" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 21 23:48:42 2026" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s50" NAME="design_1" PACKAGE="csga324" SPEEDGRADE="-1"/>
 
@@ -644,13 +644,13 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/neorv32_vivado_ip_0" HWVERSION="1.0" INSTANCE="neorv32_vivado_ip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="neorv32_vivado_ip" VLNV="NEORV32:user:neorv32_vivado_ip:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/neorv32_vivado_ip_0" HWVERSION="1.0" INSTANCE="neorv32_vivado_ip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="neorv32_vivado_ip" VLNV="NEORV32:user:neorv32_vivado_ip:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="https://stnolting.github.io/neorv32/"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="BOOT_ADDR_CUSTOM" VALUE="0x00000000"/>
-        <PARAMETER NAME="BOOT_MODE_SELECT" VALUE="0"/>
+        <PARAMETER NAME="BOOT_MODE_SELECT" VALUE="2"/>
         <PARAMETER NAME="CACHE_BLOCK_SIZE" VALUE="64"/>
         <PARAMETER NAME="CACHE_BURSTS_EN" VALUE="true"/>
         <PARAMETER NAME="CLOCK_FREQUENCY" VALUE="100000000"/>
@@ -661,19 +661,19 @@
         <PARAMETER NAME="DCACHE_EN" VALUE="false"/>
         <PARAMETER NAME="DCACHE_NUM_BLOCKS" VALUE="4"/>
         <PARAMETER NAME="DMEM_BASE" VALUE="0x80000000"/>
-        <PARAMETER NAME="DMEM_EN" VALUE="false"/>
+        <PARAMETER NAME="DMEM_EN" VALUE="true"/>
         <PARAMETER NAME="DMEM_OUTREG_EN" VALUE="false"/>
-        <PARAMETER NAME="DMEM_SIZE" VALUE="8192"/>
+        <PARAMETER NAME="DMEM_SIZE" VALUE="32768"/>
         <PARAMETER NAME="DUAL_CORE_EN" VALUE="false"/>
         <PARAMETER NAME="HPM_CNT_WIDTH" VALUE="40"/>
         <PARAMETER NAME="HPM_NUM_CNTS" VALUE="0"/>
         <PARAMETER NAME="ICACHE_EN" VALUE="false"/>
         <PARAMETER NAME="ICACHE_NUM_BLOCKS" VALUE="4"/>
         <PARAMETER NAME="IMEM_BASE" VALUE="0x00000000"/>
-        <PARAMETER NAME="IMEM_EN" VALUE="false"/>
+        <PARAMETER NAME="IMEM_EN" VALUE="true"/>
         <PARAMETER NAME="IMEM_OUTREG_EN" VALUE="false"/>
-        <PARAMETER NAME="IMEM_SIZE" VALUE="16384"/>
-        <PARAMETER NAME="IO_CFS_EN" VALUE="false"/>
+        <PARAMETER NAME="IMEM_SIZE" VALUE="32768"/>
+        <PARAMETER NAME="IO_CFS_EN" VALUE="true"/>
         <PARAMETER NAME="IO_CLINT_EN" VALUE="false"/>
         <PARAMETER NAME="IO_DMA_DSC_FIFO" VALUE="4"/>
         <PARAMETER NAME="IO_DMA_EN" VALUE="false"/>
@@ -699,7 +699,7 @@
         <PARAMETER NAME="IO_TRACER_BUFFER" VALUE="1"/>
         <PARAMETER NAME="IO_TRACER_EN" VALUE="false"/>
         <PARAMETER NAME="IO_TRACER_SIMLOG_EN" VALUE="false"/>
-        <PARAMETER NAME="IO_TRNG_EN" VALUE="false"/>
+        <PARAMETER NAME="IO_TRNG_EN" VALUE="true"/>
         <PARAMETER NAME="IO_TRNG_FIFO" VALUE="1"/>
         <PARAMETER NAME="IO_TRNG_NUM_INV" VALUE="5"/>
         <PARAMETER NAME="IO_TRNG_NUM_RBIT" VALUE="64"/>
@@ -741,12 +741,12 @@
         <PARAMETER NAME="RISCV_ISA_Zcb" VALUE="false"/>
         <PARAMETER NAME="RISCV_ISA_Zfinx" VALUE="false"/>
         <PARAMETER NAME="RISCV_ISA_Zibi" VALUE="false"/>
-        <PARAMETER NAME="RISCV_ISA_Zicntr" VALUE="false"/>
+        <PARAMETER NAME="RISCV_ISA_Zicntr" VALUE="true"/>
         <PARAMETER NAME="RISCV_ISA_Zicond" VALUE="false"/>
         <PARAMETER NAME="RISCV_ISA_Zihpm" VALUE="false"/>
         <PARAMETER NAME="RISCV_ISA_Zimop" VALUE="false"/>
-        <PARAMETER NAME="RISCV_ISA_Zknd" VALUE="false"/>
-        <PARAMETER NAME="RISCV_ISA_Zkne" VALUE="false"/>
+        <PARAMETER NAME="RISCV_ISA_Zknd" VALUE="true"/>
+        <PARAMETER NAME="RISCV_ISA_Zkne" VALUE="true"/>
         <PARAMETER NAME="RISCV_ISA_Zknh" VALUE="false"/>
         <PARAMETER NAME="RISCV_ISA_Zksed" VALUE="false"/>
         <PARAMETER NAME="RISCV_ISA_Zksh" VALUE="false"/>
@@ -758,6 +758,12 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" LEFT="255" NAME="cfs_in_i" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="255" NAME="cfs_out_o" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
@@ -842,6 +848,23 @@
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="10" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0000000000000000000000000000000000000000000000000000000000000000"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="256"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="255" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="cfs_in_i"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

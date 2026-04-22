@@ -2,15 +2,15 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Mon Apr 20 19:52:46 2026
-//Host        : mobile running 64-bit major release  (build 9200)
+//Date        : Tue Apr 21 21:17:03 2026
+//Host        : Workstation running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=3,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=3,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (clk_100MHz,
     gpio_i_0,
@@ -34,6 +34,7 @@ module design_1
   wire reset_rtl_0;
   wire uart0_rxd_i_0;
   wire uart0_txd_o_0;
+  wire [255:0]xlconstant_0_dout;
 
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(clk_100MHz),
@@ -41,7 +42,8 @@ module design_1
         .locked(clk_wiz_0_locked),
         .reset(reset_rtl_0));
   design_1_neorv32_vivado_ip_0_2 neorv32_vivado_ip_0
-       (.clk(clk_wiz_0_clk_out1),
+       (.cfs_in_i(xlconstant_0_dout),
+        .clk(clk_wiz_0_clk_out1),
         .gpio_i(gpio_i_0),
         .gpio_o(gpio_o_0),
         .irq_mei_i(1'b0),
@@ -58,4 +60,6 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
         .slowest_sync_clk(clk_wiz_0_clk_out1));
+  design_1_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
 endmodule

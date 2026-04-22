@@ -13,7 +13,8 @@
     "design_tree": {
       "clk_wiz_0": "",
       "proc_sys_reset_0": "",
-      "neorv32_vivado_ip_0": ""
+      "neorv32_vivado_ip_0": "",
+      "xlconstant_0": ""
     },
     "ports": {
       "clk_100MHz": {
@@ -104,12 +105,30 @@
       },
       "neorv32_vivado_ip_0": {
         "vlnv": "NEORV32:user:neorv32_vivado_ip:1.0",
-        "ip_revision": "1",
+        "ip_revision": "5",
         "xci_name": "design_1_neorv32_vivado_ip_0_2",
         "xci_path": "ip\\design_1_neorv32_vivado_ip_0_2\\design_1_neorv32_vivado_ip_0_2.xci",
         "inst_hier_path": "neorv32_vivado_ip_0",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "BOOT_MODE_SELECT": {
+            "value": "2"
+          },
+          "DMEM_EN": {
+            "value": "true"
+          },
+          "DMEM_SIZE": {
+            "value": "32768"
+          },
+          "IMEM_EN": {
+            "value": "true"
+          },
+          "IMEM_SIZE": {
+            "value": "32768"
+          },
+          "IO_CFS_EN": {
+            "value": "true"
+          },
           "IO_GPIO_EN": {
             "value": "true"
           },
@@ -119,8 +138,36 @@
           "IO_GPIO_OUT_NUM": {
             "value": "8"
           },
+          "IO_TRNG_EN": {
+            "value": "true"
+          },
           "IO_UART0_EN": {
             "value": "true"
+          },
+          "RISCV_ISA_Zicntr": {
+            "value": "true"
+          },
+          "RISCV_ISA_Zknd": {
+            "value": "true"
+          },
+          "RISCV_ISA_Zkne": {
+            "value": "true"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "256"
           }
         }
       }
@@ -180,6 +227,12 @@
         "ports": [
           "uart0_rxd_i_0",
           "neorv32_vivado_ip_0/uart0_rxd_i"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "neorv32_vivado_ip_0/cfs_in_i"
         ]
       }
     }

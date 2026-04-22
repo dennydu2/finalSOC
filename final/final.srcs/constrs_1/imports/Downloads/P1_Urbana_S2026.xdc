@@ -1,15 +1,13 @@
-# URBANA BOARD CONSTRAINTS V2I1 1/3/2023 
+set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports clk_100MHz]
+# URBANA BOARD CONSTRAINTS V2I1 1/3/2023
 # clk input is from the 100 MHz oscillator on Urbana board
 #create_clock -period 10.000 -name gclk [get_ports clk_100MHz]
-set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports {clk_100MHz}]
 
 # Set Bank 0 voltage
-set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
-set_property BITSTREAM.Config.SPI_buswidth 4 [current_design]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
 
 # On-board Slide Switches
-set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS25} [get_ports {i_Switch_4}]
 #set_property -dict {PACKAGE_PIN F2 IOSTANDARD LVCMOS25} [get_ports {SW[1]}]
 #set_property -dict {PACKAGE_PIN F1 IOSTANDARD LVCMOS25} [get_ports {SW[2]}]
 #set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS25} [get_ports {SW[3]}]
@@ -23,8 +21,6 @@ set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS25} [get_ports {i_Switch_4}]
 #set_property -dict {PACKAGE_PIN A6 IOSTANDARD LVCMOS25} [get_ports {SW[11]}]
 #set_property -dict {PACKAGE_PIN C7 IOSTANDARD LVCMOS25} [get_ports {SW[12]}]
 #set_property -dict {PACKAGE_PIN A7 IOSTANDARD LVCMOS25} [get_ports {SW[13]}]
-set_property -dict {PACKAGE_PIN B7 IOSTANDARD LVCMOS25} [get_ports {rst_0}]
-set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS25} [get_ports {clk_rst}]
 
 # On-board LEDs
 #set_property -dict {PACKAGE_PIN C13 IOSTANDARD LVCMOS33} [get_ports {led_kawser}]
@@ -45,10 +41,6 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS25} [get_ports {clk_rst}]
 #set_property -dict {PACKAGE_PIN G17 IOSTANDARD LVCMOS33} [get_ports {LED[15]}]
 
 # On-board Buttons
-set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS25} [get_ports {i_Switch_0}]
-set_property -dict {PACKAGE_PIN J1 IOSTANDARD LVCMOS25} [get_ports {i_Switch_1}]
-set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS25} [get_ports {i_Switch_2}]
-set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS25} [get_ports {i_Switch_3}]
 
 # On-board color LEDs
 #set_property -dict {PACKAGE_PIN C9 IOSTANDARD LVCMOS33} [get_ports {RGB0[0]}];   # RBG0_R
@@ -59,42 +51,10 @@ set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS25} [get_ports {i_Switch_3}]
 #set_property -dict {PACKAGE_PIN B11 IOSTANDARD LVCMOS33} [get_ports {RGB1[2]}];   # RBG1_B
 
 ## On-board 7-Segment display 0
-set_property -dict {PACKAGE_PIN G6 IOSTANDARD LVCMOS25} [get_ports {D0_AN[0]}];  # Active LOW
-set_property -dict {PACKAGE_PIN H6 IOSTANDARD LVCMOS25} [get_ports {D0_AN[1]}];  # Active LOW
-set_property -dict {PACKAGE_PIN C3 IOSTANDARD LVCMOS25} [get_ports {D0_AN[2]}];  # Active LOW
-set_property -dict {PACKAGE_PIN B3 IOSTANDARD LVCMOS25} [get_ports {D0_AN[3]}];  # Active LOW
-set_property -dict {PACKAGE_PIN E6 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[0]}];  # CA Active LOW
-set_property -dict {PACKAGE_PIN B4 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[1]}];  # CB Active LOW
-set_property -dict {PACKAGE_PIN D5 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[2]}];  # CC Active LOW
-set_property -dict {PACKAGE_PIN C5 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[3]}];  # CD Active LOW
-set_property -dict {PACKAGE_PIN D7 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[4]}];  # CE Active LOW
-set_property -dict {PACKAGE_PIN D6 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[5]}];  # CF Active LOW
-set_property -dict {PACKAGE_PIN C4 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[6]}];  # CG Active LOW
-set_property -dict {PACKAGE_PIN B5 IOSTANDARD LVCMOS25} [get_ports {D0_SEG[7]}];  # CDP Active LOW
 
 ## On-board 7-Segment display 1
-set_property -dict {PACKAGE_PIN E4 IOSTANDARD LVCMOS25} [get_ports {D1_AN[0]}];  # Active LOW
-set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS25} [get_ports {D1_AN[1]}]; # Active LOW
-set_property -dict {PACKAGE_PIN F5 IOSTANDARD LVCMOS25} [get_ports {D1_AN[2]}];  # Active LOW
-set_property -dict {PACKAGE_PIN H5 IOSTANDARD LVCMOS25} [get_ports {D1_AN[3]}];  # Active LOW
-set_property -dict {PACKAGE_PIN F3 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[0]}];  # CA Active LOW
-set_property -dict {PACKAGE_PIN G5 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[1]}];  # CB Active LOW
-set_property -dict {PACKAGE_PIN J3 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[2]}];  # CC Active LOW
-set_property -dict {PACKAGE_PIN H4 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[3]}];  # CD Active LOW
-set_property -dict {PACKAGE_PIN F4 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[4]}];  # CE Active LOW
-set_property -dict {PACKAGE_PIN H3 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[5]}];  # CF Active LOW
-set_property -dict {PACKAGE_PIN E5 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[6]}];  # CG Active LOW
-set_property -dict {PACKAGE_PIN J4 IOSTANDARD LVCMOS25} [get_ports {D1_SEG[7]}];  # CDP Active LOW
 
 ##HDMI Signals ###2
-set_property -dict {PACKAGE_PIN U17 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_data_p[0]}]
-set_property -dict {PACKAGE_PIN U18 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_data_n[0]}]
-set_property -dict {PACKAGE_PIN R16 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_data_p[1]}]
-set_property -dict {PACKAGE_PIN R17 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_data_n[1]}]
-set_property -dict {PACKAGE_PIN R14 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_data_p[2]}]
-set_property -dict {PACKAGE_PIN T14 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_data_n[2]}]
-set_property -dict {PACKAGE_PIN U16 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_clk_p}]
-set_property -dict {PACKAGE_PIN V17 IOSTANDARD TMDS_33} [get_ports {hdmi_tx_0_tmds_clk_n}]
 #set_property -dict {PACKAGE_PIN R15 IOSTANDARD LVCMOS33} [get_ports {HDMI_CEC_IN}]
 #set_property -dict {PACKAGE_PIN T15 IOSTANDARD LVCMOS33} [get_ports {HDMI_HPD}]
 #set_property -dict {PACKAGE_PIN U15 IOSTANDARD LVCMOS33} [get_ports {HDMI_I2C_SCL}]
@@ -467,3 +427,46 @@ set_property BITSTREAM.CONFIG.UNUSEDPIN PULLNONE [current_design]
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
 
+
+set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[0]}]
+set_property -dict {PACKAGE_PIN F2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[1]}]
+set_property -dict {PACKAGE_PIN F1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[2]}]
+set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[3]}]
+set_property -dict {PACKAGE_PIN E1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[4]}]
+set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[5]}]
+set_property -dict {PACKAGE_PIN D1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[6]}]
+set_property -dict {PACKAGE_PIN C2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[7]}]
+set_property -dict {PACKAGE_PIN C13 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[0]}]
+set_property -dict {PACKAGE_PIN C14 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[1]}]
+set_property -dict {PACKAGE_PIN D14 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[2]}]
+set_property -dict {PACKAGE_PIN D15 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[3]}]
+set_property -dict {PACKAGE_PIN D16 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[4]}]
+set_property -dict {PACKAGE_PIN F18 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[5]}]
+set_property -dict {PACKAGE_PIN E17 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[6]}]
+set_property -dict {PACKAGE_PIN D17 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[7]}]
+set_property -dict {PACKAGE_PIN B16 IOSTANDARD LVCMOS33} [get_ports uart0_rxd_i_0]
+set_property -dict {PACKAGE_PIN A16 IOSTANDARD LVCMOS33} [get_ports uart0_txd_o_0]
+set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS25} [get_ports reset_rtl_0]
+set_property -dict {PACKAGE_PIN F18 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[5]}]
+set_property -dict {PACKAGE_PIN D14 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[2]}]
+set_property -dict {PACKAGE_PIN D15 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[3]}]
+set_property -dict {PACKAGE_PIN D16 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[4]}]
+set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[0]}]
+set_property -dict {PACKAGE_PIN F2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[1]}]
+set_property -dict {PACKAGE_PIN F1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[2]}]
+set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[3]}]
+set_property -dict {PACKAGE_PIN E1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[4]}]
+set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[5]}]
+set_property -dict {PACKAGE_PIN D1 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[6]}]
+set_property -dict {PACKAGE_PIN C2 IOSTANDARD LVCMOS25} [get_ports {gpio_i_0[7]}]
+set_property -dict {PACKAGE_PIN C13 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[0]}]
+set_property -dict {PACKAGE_PIN C14 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[1]}]
+set_property -dict {PACKAGE_PIN D14 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[2]}]
+set_property -dict {PACKAGE_PIN D15 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[3]}]
+set_property -dict {PACKAGE_PIN D16 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[4]}]
+set_property -dict {PACKAGE_PIN F18 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[5]}]
+set_property -dict {PACKAGE_PIN E17 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[6]}]
+set_property -dict {PACKAGE_PIN D17 IOSTANDARD LVCMOS33} [get_ports {gpio_o_0[7]}]
+set_property -dict {PACKAGE_PIN B16 IOSTANDARD LVCMOS33} [get_ports uart0_rxd_i_0]
+set_property -dict {PACKAGE_PIN A16 IOSTANDARD LVCMOS33} [get_ports uart0_txd_o_0]
+set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS25} [get_ports reset_rtl_0]

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: NEORV32:user:neorv32_vivado_ip:1.0
--- IP Revision: 1
+-- IP Revision: 5
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -63,6 +63,8 @@ ENTITY design_1_neorv32_vivado_ip_0_2 IS
     uart0_rxd_i : IN STD_LOGIC;
     uart0_rtsn_o : OUT STD_LOGIC;
     uart0_ctsn_i : IN STD_LOGIC;
+    cfs_in_i : IN STD_LOGIC_VECTOR(255 DOWNTO 0);
+    cfs_out_o : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
     irq_msi_i : IN STD_LOGIC;
     irq_mti_i : IN STD_LOGIC;
     irq_mei_i : IN STD_LOGIC
@@ -306,8 +308,8 @@ BEGIN
       RISCV_ISA_Zihpm => false,
       RISCV_ISA_Zimop => false,
       RISCV_ISA_Zmmul => false,
-      RISCV_ISA_Zknd => false,
-      RISCV_ISA_Zkne => false,
+      RISCV_ISA_Zknd => true,
+      RISCV_ISA_Zkne => true,
       RISCV_ISA_Zknh => false,
       RISCV_ISA_Zksed => false,
       RISCV_ISA_Zksh => false,
@@ -364,12 +366,12 @@ BEGIN
       IO_PWM_EN => false,
       IO_PWM_NUM => 1,
       IO_WDT_EN => false,
-      IO_TRNG_EN => false,
+      IO_TRNG_EN => true,
       IO_TRNG_FIFO => 1,
       IO_TRNG_NUM_RO => 3,
       IO_TRNG_NUM_INV => 5,
       IO_TRNG_NUM_RBIT => 64,
-      IO_CFS_EN => false,
+      IO_CFS_EN => true,
       IO_NEOLED_EN => false,
       IO_NEOLED_TX_FIFO => 1,
       IO_GPTMR_EN => false,
@@ -421,7 +423,8 @@ BEGIN
       twd_sda_i => '0',
       twd_scl_i => '0',
       onewire_i => '0',
-      cfs_in_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 256)),
+      cfs_in_i => cfs_in_i,
+      cfs_out_o => cfs_out_o,
       irq_msi_i => irq_msi_i,
       irq_mti_i => irq_mti_i,
       irq_mei_i => irq_mei_i
