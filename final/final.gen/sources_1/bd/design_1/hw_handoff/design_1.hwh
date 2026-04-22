@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 21 23:23:09 2026" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 22 17:02:06 2026" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s50" NAME="design_1" PACKAGE="csga324" SPEEDGRADE="-1"/>
 
@@ -7,6 +7,11 @@
     <PORT DIR="O" LEFT="3" NAME="LED" RIGHT="0" SIGIS="undef" SIGNAME="neorv32_vivado_ip_0_gpio_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="gpio_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SW">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="gpio_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="UART_0_rxd" SIGIS="undef" SIGNAME="External_Ports_UART_0_rxd">
@@ -22,11 +27,6 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_100MHz" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="3" NAME="gpio_io_i_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_io_i_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="gpio_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="hdmi_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_hdmi_reset">
@@ -1324,9 +1324,9 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="gpio_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_io_i_0">
+        <PORT DIR="I" LEFT="3" NAME="gpio_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SW">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gpio_io_i_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="SW"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="gpio_o" RIGHT="0" SIGIS="undef" SIGNAME="neorv32_vivado_ip_0_gpio_o">

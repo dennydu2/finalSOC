@@ -2,8 +2,8 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Tue Apr 21 23:23:06 2026
-//Host        : mobile running 64-bit major release  (build 9200)
+//Date        : Wed Apr 22 17:02:03 2026
+//Host        : dendenx running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -13,10 +13,10 @@
 (* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=2,da_clkrst_cnt=5,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (LED,
+    SW,
     UART_0_rxd,
     UART_0_txd,
     clk_100MHz,
-    gpio_io_i_0,
     hdmi_reset,
     hdmi_tx_0_0_tmds_clk_n,
     hdmi_tx_0_0_tmds_clk_p,
@@ -26,10 +26,10 @@ module design_1
     o_Seven_Seg_P1_out_0_port_out_0,
     o_Seven_Seg_P2_out_0_port_out_0);
   output [3:0]LED;
+  input [3:0]SW;
   input UART_0_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.UART_0_TXD DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.UART_0_TXD, LAYERED_METADATA undef" *) output UART_0_txd;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN design_1_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
-  input [3:0]gpio_io_i_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.HDMI_RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.HDMI_RESET, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input hdmi_reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_TX_0_0_TMDS_CLK_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_TX_0_0_TMDS_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_tx_0_0_tmds_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_TX_0_0_TMDS_CLK_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_TX_0_0_TMDS_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_tx_0_0_tmds_clk_p;
@@ -40,6 +40,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.O_SEVEN_SEG_P2_OUT_0_PORT_OUT_0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.O_SEVEN_SEG_P2_OUT_0_PORT_OUT_0, LAYERED_METADATA undef" *) output [6:0]o_Seven_Seg_P2_out_0_port_out_0;
 
   wire [3:0]LED;
+  wire [3:0]SW;
   wire UART_0_rxd;
   wire UART_0_txd;
   wire clk_100MHz;
@@ -47,7 +48,6 @@ module design_1
   wire clk_wiz_0_clk_out2;
   wire clk_wiz_0_clk_out3;
   wire clk_wiz_0_locked;
-  wire [3:0]gpio_io_i_0;
   wire hdmi_reset;
   wire hdmi_tx_0_0_tmds_clk_n;
   wire hdmi_tx_0_0_tmds_clk_p;
@@ -202,7 +202,7 @@ module design_1
         .aresetn(proc_sys_reset_0_peripheral_aresetn));
   design_1_neorv32_vivado_ip_0_3 neorv32_vivado_ip_0
        (.clk(clk_wiz_0_clk_out1),
-        .gpio_i(gpio_io_i_0),
+        .gpio_i(SW),
         .gpio_o(LED),
         .irq_mei_i(1'b0),
         .irq_msi_i(1'b0),

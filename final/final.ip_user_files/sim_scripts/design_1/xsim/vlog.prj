@@ -1,9 +1,10 @@
-verilog xil_defaultlib -i "../../../../../../../2025.1/Vivado/data/rsb/busdef" --include "C:/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+verilog xil_defaultlib -i "../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" --include "C:/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/sim/bd_892d.v" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_0/sim/bd_892d_one_0.v" \
 
-sv xil_defaultlib -i "../../../../../../../2025.1/Vivado/data/rsb/busdef" --include "C:/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+sv xil_defaultlib -i "../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" --include "C:/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_2/sim/bd_892d_arinsw_0.sv" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_3/sim/bd_892d_rinsw_0.sv" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_4/sim/bd_892d_awinsw_0.sv" \
@@ -35,14 +36,9 @@ sv xil_defaultlib -i "../../../../../../../2025.1/Vivado/data/rsb/busdef" --incl
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_30/sim/bd_892d_m00wn_0.sv" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_31/sim/bd_892d_m00bn_0.sv" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_32/sim/bd_892d_m00e_0.sv" \
-
-verilog xil_defaultlib -i "../../../../../../../2025.1/Vivado/data/rsb/busdef" --include "C:/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../bd/design_1/ip/design_1_smartconnect_0_2/bd_0/sim/bd_892d.v" \
-
-sv xil_defaultlib -i "../../../../../../../2025.1/Vivado/data/rsb/busdef" --include "C:/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_2/sim/design_1_smartconnect_0_2.sv" \
 
-verilog xil_defaultlib -i "../../../../../../../2025.1/Vivado/data/rsb/busdef" --include "C:/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+verilog xil_defaultlib -i "../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" --include "C:/Xilinx/2025.1/Vivado/data/xilinx_vip/include" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a9be" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" --include "../../../../final.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ipshared/7a7c/src/P2_BD_pongIP_AXI_S2026.v" \
 "../../../bd/design_1/ipshared/7a7c/src/P2_BD_pongIP_S2026.v" \
 "../../../bd/design_1/ipshared/7a7c/src/P2_BD_pongIP_S2026_Debounce_Switch_0_0.v" \

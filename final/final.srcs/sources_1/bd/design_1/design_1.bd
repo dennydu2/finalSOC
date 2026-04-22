@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2F5E1B9AD816CE17",
+      "boundary_crc": "0x9ADB5F1DAB11EF55",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../final.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -69,7 +69,7 @@
           }
         }
       },
-      "gpio_io_i_0": {
+      "SW": {
         "direction": "I",
         "left": "3",
         "right": "0"
@@ -440,7 +440,7 @@
       },
       "gpio_io_i_0_1": {
         "ports": [
-          "gpio_io_i_0",
+          "SW",
           "neorv32_vivado_ip_0/gpio_i"
         ]
       },
