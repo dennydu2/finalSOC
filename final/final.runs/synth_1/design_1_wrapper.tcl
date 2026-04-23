@@ -59,6 +59,7 @@ OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 6
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -72,9 +73,9 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
-  c:/Users/denny/OneDrive/Documents/GitHub/finalSOC/part2_expo
-  c:/Users/denny/OneDrive/Documents/GitHub/finalSOC/rtl/system_integration/neorv32_vivado_ip_work
-  c:/Users/denny/OneDrive/Documents/GitHub/finalSOC/part2_expo_axi
+  c:/Users/denny/Downloads/finalSOC/rtl/system_integration/neorv32_vivado_ip_work
+  c:/Users/denny/Downloads/finalSOC/part2_expo
+  c:/Users/denny/Downloads/finalSOC/part2_expo_axi
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/denny/Downloads/finalSOC/final/final.cache/ip [current_project]

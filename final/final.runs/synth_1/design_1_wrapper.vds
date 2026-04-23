@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Apr 22 17:07:09 2026
-# Process ID         : 20520
+# Start of session at: Wed Apr 22 19:14:44 2026
+# Process ID         : 30436
 # Current directory  : C:/Users/denny/Downloads/finalSOC/final/final.runs/synth_1
 # Command line       : vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file           : C:/Users/denny/Downloads/finalSOC/final/final.runs/synth_1/design_1_wrapper.vds
@@ -19,13 +19,13 @@
 # Host memory        : 34053 MB
 # Swap memory        : 14495 MB
 # Total Virtual      : 48549 MB
-# Available Virtual  : 18405 MB
+# Available Virtual  : 12257 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/denny/OneDrive/Documents/GitHub/finalSOC/part2_expo'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/denny/OneDrive/Documents/GitHub/finalSOC/rtl/system_integration/neorv32_vivado_ip_work'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/denny/OneDrive/Documents/GitHub/finalSOC/part2_expo_axi'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/denny/Downloads/finalSOC/rtl/system_integration/neorv32_vivado_ip_work'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/denny/Downloads/finalSOC/part2_expo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/denny/Downloads/finalSOC/part2_expo_axi'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
 Command: read_checkpoint -auto_incremental -incremental C:/Users/denny/Downloads/finalSOC/final/final.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/denny/Downloads/finalSOC/final/final.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
@@ -39,9 +39,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19188
+INFO: [Synth 8-7075] Helper process launched with PID 32096
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.973 ; gain = 494.570
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1197.758 ; gain = 494.676
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_2/synth/bd_892d_arinsw_0.sv:83]
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_2/bd_0/ip/ip_2/synth/bd_892d_arinsw_0.sv:84]
@@ -260,7 +260,7 @@ WARNING: [Synth 8-7023] instance 'main_smartconnect_0' of module 'design_1_smart
 INFO: [Synth 8-638] synthesizing module 'design_1_neorv32_vivado_ip_0_3' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_neorv32_vivado_ip_0_3/synth/design_1_neorv32_vivado_ip_0_3.vhd:101]
 	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
 	Parameter DUAL_CORE_EN bound to: 0 - type: bool 
-	Parameter BOOT_MODE_SELECT bound to: 0 - type: integer 
+	Parameter BOOT_MODE_SELECT bound to: 2 - type: integer 
 	Parameter BOOT_ADDR_CUSTOM bound to: 32'b00000000000000000000000000000000 
 	Parameter OCD_EN bound to: 0 - type: bool 
 	Parameter OCD_NUM_HW_TRIGGERS bound to: 0 - type: integer 
@@ -303,11 +303,11 @@ INFO: [Synth 8-638] synthesizing module 'design_1_neorv32_vivado_ip_0_3' [c:/Use
 	Parameter PMP_NAP_MODE_EN bound to: 0 - type: bool 
 	Parameter HPM_NUM_CNTS bound to: 0 - type: integer 
 	Parameter HPM_CNT_WIDTH bound to: 40 - type: integer 
-	Parameter IMEM_EN bound to: 0 - type: bool 
+	Parameter IMEM_EN bound to: 1 - type: bool 
 	Parameter IMEM_BASE bound to: 32'b00000000000000000000000000000000 
 	Parameter IMEM_SIZE bound to: 16384 - type: integer 
 	Parameter IMEM_OUTREG_EN bound to: 0 - type: bool 
-	Parameter DMEM_EN bound to: 0 - type: bool 
+	Parameter DMEM_EN bound to: 1 - type: bool 
 	Parameter DMEM_BASE bound to: 32'b10000000000000000000000000000000 
 	Parameter DMEM_SIZE bound to: 8192 - type: integer 
 	Parameter DMEM_OUTREG_EN bound to: 0 - type: bool 
@@ -363,11 +363,11 @@ INFO: [Synth 8-638] synthesizing module 'design_1_neorv32_vivado_ip_0_3' [c:/Use
 	Parameter IO_TRACER_EN bound to: 0 - type: bool 
 	Parameter IO_TRACER_BUFFER bound to: 1 - type: integer 
 	Parameter IO_TRACER_SIMLOG_EN bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'neorv32_vivado_ip' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32_vivado_ip.vhd:23' bound to instance 'U0' of component 'neorv32_vivado_ip' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_neorv32_vivado_ip_0_3/synth/design_1_neorv32_vivado_ip_0_3.vhd:346]
-INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32_vivado_ip.vhd:287]
+INFO: [Synth 8-3491] module 'neorv32_vivado_ip' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32_vivado_ip.vhd:23' bound to instance 'U0' of component 'neorv32_vivado_ip' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_neorv32_vivado_ip_0_3/synth/design_1_neorv32_vivado_ip_0_3.vhd:346]
+INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32_vivado_ip.vhd:287]
 	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
 	Parameter DUAL_CORE_EN bound to: 0 - type: bool 
-	Parameter BOOT_MODE_SELECT bound to: 0 - type: integer 
+	Parameter BOOT_MODE_SELECT bound to: 2 - type: integer 
 	Parameter BOOT_ADDR_CUSTOM bound to: 32'b00000000000000000000000000000000 
 	Parameter OCD_EN bound to: 0 - type: bool 
 	Parameter OCD_NUM_HW_TRIGGERS bound to: 0 - type: integer 
@@ -410,11 +410,11 @@ INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/denny/Down
 	Parameter PMP_NAP_MODE_EN bound to: 0 - type: bool 
 	Parameter HPM_NUM_CNTS bound to: 0 - type: integer 
 	Parameter HPM_CNT_WIDTH bound to: 40 - type: integer 
-	Parameter IMEM_EN bound to: 0 - type: bool 
+	Parameter IMEM_EN bound to: 1 - type: bool 
 	Parameter IMEM_BASE bound to: 32'b00000000000000000000000000000000 
 	Parameter IMEM_SIZE bound to: 16384 - type: integer 
 	Parameter IMEM_OUTREG_EN bound to: 0 - type: bool 
-	Parameter DMEM_EN bound to: 0 - type: bool 
+	Parameter DMEM_EN bound to: 1 - type: bool 
 	Parameter DMEM_BASE bound to: 32'b10000000000000000000000000000000 
 	Parameter DMEM_SIZE bound to: 8192 - type: integer 
 	Parameter DMEM_OUTREG_EN bound to: 0 - type: bool 
@@ -465,73 +465,83 @@ INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/denny/Down
 	Parameter IO_TRACER_EN bound to: 0 - type: bool 
 	Parameter IO_TRACER_BUFFER bound to: 1 - type: integer 
 	Parameter IO_TRACER_SIMLOG_EN bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'neorv32_top' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_top.vhd:21' bound to instance 'neorv32_top_inst' of component 'neorv32_top' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32_vivado_ip.vhd:382]
-INFO: [Synth 8-638] synthesizing module 'neorv32_top' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_top.vhd:283]
-INFO: [Synth 8-638] synthesizing module 'neorv32_sys_reset' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_sys.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_reset' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_sys.vhd:34]
-INFO: [Synth 8-638] synthesizing module 'neorv32_sys_clock' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_sys.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_clock' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_sys.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu.vhd:99]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:45]
+INFO: [Synth 8-3491] module 'neorv32_top' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_top.vhd:21' bound to instance 'neorv32_top_inst' of component 'neorv32_top' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32_vivado_ip.vhd:382]
+INFO: [Synth 8-638] synthesizing module 'neorv32_top' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_top.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sys_reset' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_sys.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_reset' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_sys.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sys_clock' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_sys.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_clock' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_sys.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:45]
 	Parameter AWIDTH bound to: 1 - type: integer 
 	Parameter DWIDTH bound to: 17 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:326' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:184]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend_ipb' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:347]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend_ipb' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:347]
+INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:326' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend_ipb' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:347]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend_ipb' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:347]
 	Parameter AWIDTH bound to: 1 - type: integer 
 	Parameter DWIDTH bound to: 17 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:326' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:184]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_frontend.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_control' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_control' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:91]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_regfile' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_regfile.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_regfile' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_regfile.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_alu.vhd:60]
-INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_alu.vhd:111]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu_shifter' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_alu_shifter.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu_shifter' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_alu_shifter.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_alu.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_lsu' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_lsu.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_lsu' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_lsu.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu.vhd:99]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_switch' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_switch' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:35]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_gateway' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:305]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_gateway' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:305]
-INFO: [Synth 8-638] synthesizing module 'neorv32_xbus' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_xbus.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:190]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:190]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_xbus' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_xbus.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_io_switch' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:549]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg__parameterized0' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:190]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg__parameterized0' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:190]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_io_switch' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bus.vhd:549]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bootrom' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bootrom.vhd:26]
-	Parameter AWIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_bootrom_rom' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bootrom_rom.vhd:21' bound to instance 'bootrom_rom_inst' of component 'neorv32_bootrom_rom' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bootrom.vhd:54]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bootrom_rom' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bootrom_rom.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bootrom_rom' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bootrom_rom.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bootrom' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_bootrom.vhd:26]
-INFO: [Synth 8-638] synthesizing module 'neorv32_gpio' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_gpio.vhd:34]
-INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_gpio.vhd:149]
-INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_gpio.vhd:149]
-INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_gpio.vhd:149]
-INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_gpio.vhd:149]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_gpio' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_gpio.vhd:34]
-INFO: [Synth 8-638] synthesizing module 'neorv32_uart' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_uart.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_uart' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_uart.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'neorv32_sysinfo' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_sysinfo.vhd:67]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_sysinfo' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_sysinfo.vhd:67]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_top' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_top.vhd:283]
+INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:326' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_frontend.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_control' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_control' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_regfile' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_regfile.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_regfile' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_regfile.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_alu.vhd:60]
+INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_alu.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu_shifter' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_alu_shifter.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu_shifter' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_alu_shifter.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_alu.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_lsu' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_lsu.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_lsu' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_lsu.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_switch' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_switch' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_gateway' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:305]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_gateway' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'neorv32_imem' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_imem.vhd:31]
+	Parameter AWIDTH bound to: 14 - type: integer 
+	Parameter OUTREG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'neorv32_imem_rom' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_imem_rom.vhd:21' bound to instance 'imem_rom_inst' of component 'neorv32_imem_rom' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_imem.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'neorv32_imem_rom' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_imem_rom.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_imem_rom' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_imem_rom.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_imem' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_imem.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'neorv32_dmem' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_dmem.vhd:30]
+	Parameter AWIDTH bound to: 13 - type: integer 
+	Parameter OUTREG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'neorv32_dmem_ram' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_dmem_ram.vhd:20' bound to instance 'dmem_ram_inst' of component 'neorv32_dmem_ram' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_dmem.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'neorv32_dmem_ram' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_dmem_ram.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_dmem_ram' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_dmem_ram.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_dmem' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_dmem.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'neorv32_xbus' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_xbus.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_xbus' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_xbus.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_io_switch' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:549]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg__parameterized0' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg__parameterized0' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_io_switch' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_bus.vhd:549]
+INFO: [Synth 8-638] synthesizing module 'neorv32_gpio' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_gpio.vhd:34]
+INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_gpio.vhd:149]
+INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_gpio.vhd:149]
+INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_gpio.vhd:149]
+INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_gpio.vhd:149]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_gpio' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_gpio.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'neorv32_uart' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_uart.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_uart' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_uart.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sysinfo' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_sysinfo.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sysinfo' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_sysinfo.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_top' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_top.vhd:283]
 	Parameter BURST_EN bound to: 0 - type: bool 
 	Parameter BURST_LEN bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'xbus2axi4_bridge' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/xbus2axi4_bridge.vhd:17' bound to instance 'axi4_bridge_inst' of component 'xbus2axi4_bridge' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32_vivado_ip.vhd:671]
-INFO: [Synth 8-638] synthesizing module 'xbus2axi4_bridge' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/xbus2axi4_bridge.vhd:74]
-INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/xbus2axi4_bridge.vhd:98]
-INFO: [Synth 8-256] done synthesizing module 'xbus2axi4_bridge' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/xbus2axi4_bridge.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_vivado_ip' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32_vivado_ip.vhd:287]
+INFO: [Synth 8-3491] module 'xbus2axi4_bridge' declared at 'c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/xbus2axi4_bridge.vhd:17' bound to instance 'axi4_bridge_inst' of component 'xbus2axi4_bridge' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32_vivado_ip.vhd:671]
+INFO: [Synth 8-638] synthesizing module 'xbus2axi4_bridge' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/xbus2axi4_bridge.vhd:74]
+INFO: [Synth 8-226] default block is never used [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/xbus2axi4_bridge.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'xbus2axi4_bridge' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/xbus2axi4_bridge.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_vivado_ip' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32_vivado_ip.vhd:287]
 INFO: [Synth 8-256] done synthesizing module 'design_1_neorv32_vivado_ip_0_3' (0#1) [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_neorv32_vivado_ip_0_3/synth/design_1_neorv32_vivado_ip_0_3.vhd:101]
 WARNING: [Synth 8-7071] port 'uart0_rtsn_o' of module 'design_1_neorv32_vivado_ip_0_3' is unconnected for instance 'neorv32_vivado_ip_0' [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/synth/design_1.v:203]
 WARNING: [Synth 8-7023] instance 'neorv32_vivado_ip_0' of module 'design_1_neorv32_vivado_ip_0_3' has 40 connections declared, but only 39 given [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/synth/design_1.v:203]
@@ -685,28 +695,29 @@ WARNING: [Synth 8-3848] Net S01_AXI_rresp in module/entity bd_892d does not have
 WARNING: [Synth 8-3848] Net S01_AXI_ruser in module/entity bd_892d does not have driver. [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_2/bd_0/synth/bd_892d.v:199]
 WARNING: [Synth 8-3848] Net S01_AXI_rvalid in module/entity bd_892d does not have driver. [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_2/bd_0/synth/bd_892d.v:200]
 WARNING: [Synth 8-3848] Net S01_AXI_wready in module/entity bd_892d does not have driver. [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_2/bd_0/synth/bd_892d.v:204]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[if_ready] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_cur] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_nxt] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs1] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs2] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rd] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mo_en] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mi_en] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_priv] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_wdata] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cnt_event] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct3] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct12] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_opcode] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_priv] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_trap] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_sync_exc] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_debug] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:198]
-WARNING: [Synth 8-6014] Unused sequential element csr_reg[mcounteren] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:1085]
-WARNING: [Synth 8-6014] Unused sequential element csr_reg[dpc] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:1085]
-WARNING: [Synth 8-6014] Unused sequential element csr_reg[dscratch0] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/neorv32/neorv32_cpu_control.vhd:1085]
-WARNING: [Synth 8-6014] Unused sequential element wb_ack_reg was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/9444/src/xbus2axi4_bridge.vhd:89]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[if_ready] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_cur] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_nxt] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs1] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs2] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rd] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mo_en] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mi_en] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_priv] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_wdata] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cnt_event] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct3] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct12] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_opcode] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_priv] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_trap] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_sync_exc] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_debug] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[mcounteren] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:1085]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[dpc] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:1085]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[dscratch0] was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_cpu_control.vhd:1085]
+WARNING: [Synth 8-6014] Unused sequential element wren_reg was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/neorv32/neorv32_imem.vhd:123]
+WARNING: [Synth 8-6014] Unused sequential element wb_ack_reg was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/1fff/src/xbus2axi4_bridge.vhd:89]
 WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [c:/Users/denny/Downloads/finalSOC/final/final.gen/sources_1/bd/design_1/ipshared/7a7c/src/hdmi_tx_v1_0.v:148]
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_Col_Count[3] in module Pong_Top2 is either unconnected or has no load
@@ -810,18 +821,18 @@ WARNING: [Synth 8-7129] Port bus_req_i[addr][3] in module neorv32_uart is either
 WARNING: [Synth 8-7129] Port bus_req_i[addr][1] in module neorv32_uart is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1494.723 ; gain = 792.320
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.160 ; gain = 796.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1494.723 ; gain = 792.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.160 ; gain = 796.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1494.723 ; gain = 792.320
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.160 ; gain = 796.078
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.937 . Memory (MB): peak = 1494.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.961 . Memory (MB): peak = 1499.160 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1164,29 +1175,29 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wra
 INFO: [Project 1-1714] 40 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1805.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1809.504 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   SRL16 => SRL16E: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 1805.953 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.133 . Memory (MB): peak = 1809.504 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1805.953 ; gain = 1103.551
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1809.504 ; gain = 1106.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1805.953 ; gain = 1103.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1809.504 ; gain = 1106.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1805.953 ; gain = 1103.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1809.504 ; gain = 1106.422
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'sc_mmu_v1_0_15_decerr_slave'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_endpoint.w_state_reg' in module 'sc_mmu_v1_0_15_top'
@@ -1299,7 +1310,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'one-hot' in module 'Pong_Top2'
 WARNING: [Synth 8-12595] Onehot encoded FSM with state register 'r_SM_Main_reg' is not having reset. This may cause incorrect behavior. User should consider using FSM_SAFE_STATE attribute on the register
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1805.953 ; gain = 1103.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1809.504 ; gain = 1106.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1349,15 +1360,16 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 6     
 	               10 Bit    Registers := 13    
 	                9 Bit    Registers := 6     
-	                8 Bit    Registers := 19    
+	                8 Bit    Registers := 23    
 	                7 Bit    Registers := 8     
 	                6 Bit    Registers := 3     
 	                5 Bit    Registers := 17    
 	                4 Bit    Registers := 75    
 	                3 Bit    Registers := 63    
-	                2 Bit    Registers := 23    
+	                2 Bit    Registers := 25    
 	                1 Bit    Registers := 445   
 +---RAMs : 
+	              16K Bit	(2048 X 8 bit)          RAMs := 4     
 	             1024 Bit	(32 X 32 bit)          RAMs := 1     
 +---ROMs : 
 	                    ROMs := 1     
@@ -1370,7 +1382,7 @@ Detailed RTL Component Info :
 	   2 Input   54 Bit        Muxes := 2     
 	   2 Input   40 Bit        Muxes := 1     
 	   2 Input   33 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 53    
+	   2 Input   32 Bit        Muxes := 54    
 	   3 Input   32 Bit        Muxes := 1     
 	  11 Input   32 Bit        Muxes := 3     
 	   4 Input   32 Bit        Muxes := 2     
@@ -1387,7 +1399,7 @@ Detailed RTL Component Info :
 	   2 Input    6 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 25    
 	   5 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 50    
+	   2 Input    4 Bit        Muxes := 51    
 	   3 Input    4 Bit        Muxes := 2     
 	  11 Input    4 Bit        Muxes := 1     
 	   9 Input    4 Bit        Muxes := 1     
@@ -1406,7 +1418,7 @@ Detailed RTL Component Info :
 	   4 Input    1 Bit        Muxes := 21    
 	   7 Input    1 Bit        Muxes := 12    
 	   3 Input    1 Bit        Muxes := 19    
-	   2 Input    1 Bit        Muxes := 348   
+	   2 Input    1 Bit        Muxes := 347   
 	  12 Input    1 Bit        Muxes := 10    
 	   5 Input    1 Bit        Muxes := 1     
 	  11 Input    1 Bit        Muxes := 26    
@@ -1432,19 +1444,31 @@ WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused a
 WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset__parameterized1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1805.953 ; gain = 1103.551
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1809.504 ; gain = 1106.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping Report
-+----------------+-----------------------------+---------------+----------------+
-|Module Name     | RTL Object                  | Depth x Width | Implemented As | 
-+----------------+-----------------------------+---------------+----------------+
-|neorv32_bootrom | bootrom_rom_inst/data_o_reg | 1024x32       | Block RAM      | 
-+----------------+-----------------------------+---------------+----------------+
++-------------+----------------------------------+---------------+----------------+
+|Module Name  | RTL Object                       | Depth x Width | Implemented As | 
++-------------+----------------------------------+---------------+----------------+
+|neorv32_imem | imem_rom.imem_rom_inst/rdata_reg | 2048x32       | Block RAM      | 
++-------------+----------------------------------+---------------+----------------+
 
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                     | RTL Object                                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[0].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[1].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[2].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[3].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+----------------+----------------------+----------------+
@@ -1464,17 +1488,28 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1805.953 ; gain = 1103.551
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1809.504 ; gain = 1106.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 1881.738 ; gain = 1179.336
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1898.914 ; gain = 1195.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                     | RTL Object                                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[0].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[1].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[2].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|design_1_i/i_0/neorv32_vivado_ip_0/\U0/neorv32_top_inst /\memory_system.neorv32_dmem_enabled.neorv32_dmem_inst  | dmem_ram_inst/ram_gen[3].ram_inst/memory_large.spram_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
 
 Distributed RAM: Final Mapping Report
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+----------------+----------------------+----------------+
@@ -1492,9 +1527,14 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance design_1_i/neorv32_vivado_ip_0/U0/neorv32_top_inst/io_system.neorv32_bootrom_enabled.neorv32_boot_rom_inst/bootrom_rom_inst/data_o_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance design_1_i/neorv32_vivado_ip_0/U0/neorv32_top_inst/memory_system.neorv32_imem_enabled.neorv32_imem_inst/imem_rom.imem_rom_inst/rdata_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance design_1_i/neorv32_vivado_ip_0/U0/neorv32_top_inst/memory_system.neorv32_imem_enabled.neorv32_imem_inst/imem_rom.imem_rom_inst/rdata_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance design_1_i/neorv32_vivado_ip_0/U0/neorv32_top_inst/memory_system.neorv32_dmem_enabled.neorv32_dmem_inst/dmem_ram_inst/ram_gen[0].ram_inst/memory_large.spram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance design_1_i/neorv32_vivado_ip_0/U0/neorv32_top_inst/memory_system.neorv32_dmem_enabled.neorv32_dmem_inst/dmem_ram_inst/ram_gen[1].ram_inst/memory_large.spram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance design_1_i/neorv32_vivado_ip_0/U0/neorv32_top_inst/memory_system.neorv32_dmem_enabled.neorv32_dmem_inst/dmem_ram_inst/ram_gen[2].ram_inst/memory_large.spram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance design_1_i/neorv32_vivado_ip_0/U0/neorv32_top_inst/memory_system.neorv32_dmem_enabled.neorv32_dmem_inst/dmem_ram_inst/ram_gen[3].ram_inst/memory_large.spram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 1895.438 ; gain = 1193.035
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 1912.312 ; gain = 1209.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1512,37 +1552,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 2016.871 ; gain = 1314.469
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2030.445 ; gain = 1327.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 2016.871 ; gain = 1314.469
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2030.445 ; gain = 1327.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2016.871 ; gain = 1314.469
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2030.445 ; gain = 1327.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2016.871 ; gain = 1314.469
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2030.445 ; gain = 1327.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2021.840 ; gain = 1319.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2035.512 ; gain = 1332.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2021.840 ; gain = 1319.438
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2035.512 ; gain = 1332.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1585,11 +1625,11 @@ Report Cell Usage:
 |1     |BUFG       |     4|
 |2     |CARRY4     |    89|
 |3     |LUT1       |   149|
-|4     |LUT2       |   349|
-|5     |LUT3       |   406|
-|6     |LUT4       |   415|
-|7     |LUT5       |   575|
-|8     |LUT6       |   817|
+|4     |LUT2       |   404|
+|5     |LUT3       |   378|
+|6     |LUT4       |   401|
+|7     |LUT5       |   569|
+|8     |LUT6       |   868|
 |9     |MMCME2_ADV |     1|
 |10    |MUXF7      |     3|
 |11    |MUXF8      |     1|
@@ -1597,31 +1637,32 @@ Report Cell Usage:
 |14    |RAM16X1D   |     1|
 |15    |RAM32M     |     6|
 |16    |RAM32X1D   |    32|
-|17    |RAMB36E1   |     1|
-|18    |SRL16      |     2|
-|19    |SRL16E     |    44|
-|20    |SRLC32E    |    68|
-|21    |FDCE       |  1140|
-|22    |FDPE       |    40|
-|23    |FDRE       |   906|
-|24    |FDSE       |    83|
-|25    |IBUF       |     7|
-|26    |OBUF       |    21|
-|27    |OBUFDS     |     4|
+|17    |RAMB18E1   |     4|
+|18    |RAMB36E1   |     2|
+|20    |SRL16      |     2|
+|21    |SRL16E     |    44|
+|22    |SRLC32E    |    68|
+|23    |FDCE       |  1157|
+|24    |FDPE       |    18|
+|25    |FDRE       |   906|
+|26    |FDSE       |    83|
+|27    |IBUF       |     7|
+|28    |OBUF       |    21|
+|29    |OBUFDS     |     4|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2021.840 ; gain = 1319.438
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2035.512 ; gain = 1332.430
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4784 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:58 . Memory (MB): peak = 2021.840 ; gain = 1008.207
-Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2021.840 ; gain = 1319.438
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:00 . Memory (MB): peak = 2035.512 ; gain = 1022.086
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2035.512 ; gain = 1332.430
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 2027.020 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 140 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 2040.691 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 145 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2034.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2048.332 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 41 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
@@ -1629,13 +1670,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 32 instances
   SRL16 => SRL16E: 2 instances
 
-Synth Design complete | Checksum: ecbbc4a0
+Synth Design complete | Checksum: 7a20b2e1
 INFO: [Common 17-83] Releasing license: Synthesis
-350 Infos, 308 Warnings, 107 Critical Warnings and 0 Errors encountered.
+362 Infos, 309 Warnings, 107 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 2034.680 ; gain = 1503.754
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:14 . Memory (MB): peak = 2048.332 ; gain = 1516.016
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2034.680 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2048.332 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/denny/Downloads/finalSOC/final/final.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 22 17:08:30 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 22 19:16:08 2026...

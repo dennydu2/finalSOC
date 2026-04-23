@@ -330,6 +330,15 @@
         "inst_hier_path": "neorv32_vivado_ip_0",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "BOOT_MODE_SELECT": {
+            "value": "2"
+          },
+          "DMEM_EN": {
+            "value": "true"
+          },
+          "IMEM_EN": {
+            "value": "true"
+          },
           "IO_GPIO_EN": {
             "value": "true"
           },
@@ -415,8 +424,8 @@
           "clk_wiz_0/clk_out1",
           "proc_sys_reset_0/slowest_sync_clk",
           "main_smartconnect_0/aclk",
-          "neorv32_vivado_ip_0/clk",
-          "pong_axi_0/s00_axi_aclk"
+          "pong_axi_0/s00_axi_aclk",
+          "neorv32_vivado_ip_0/clk"
         ]
       },
       "clk_wiz_0_clk_out2": {
@@ -501,10 +510,10 @@
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
-          "neorv32_vivado_ip_0/resetn",
           "main_smartconnect_0/aresetn",
           "pong_axi_0/rst_0_port_out",
-          "pong_axi_0/s00_axi_aresetn"
+          "pong_axi_0/s00_axi_aresetn",
+          "neorv32_vivado_ip_0/resetn"
         ]
       },
       "reset_rtl_0_1": {

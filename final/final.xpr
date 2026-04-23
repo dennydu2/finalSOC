@@ -47,9 +47,9 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../OneDrive/Documents/GitHub/finalSOC/part2_expo"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../OneDrive/Documents/GitHub/finalSOC/rtl/system_integration/neorv32_vivado_ip_work"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../OneDrive/Documents/GitHub/finalSOC/part2_expo_axi"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../rtl/system_integration/neorv32_vivado_ip_work"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../part2_expo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../part2_expo_axi"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -68,13 +68,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="9"/>
-    <Option Name="WTModelSimExportSim" Val="9"/>
-    <Option Name="WTQuestaExportSim" Val="9"/>
+    <Option Name="WTXSimExportSim" Val="13"/>
+    <Option Name="WTModelSimExportSim" Val="13"/>
+    <Option Name="WTQuestaExportSim" Val="13"/>
     <Option Name="WTIesExportSim" Val="0"/>
     <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="9"/>
-    <Option Name="WTActivehdlExportSim" Val="9"/>
+    <Option Name="WTRivieraExportSim" Val="13"/>
+    <Option Name="WTActivehdlExportSim" Val="13"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>

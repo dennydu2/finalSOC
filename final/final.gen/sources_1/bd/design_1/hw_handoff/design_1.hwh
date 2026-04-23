@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 22 17:02:06 2026" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 22 19:14:10 2026" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s50" NAME="design_1" PACKAGE="csga324" SPEEDGRADE="-1"/>
 
@@ -664,8 +664,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="main_smartconnect_0" PORT="aclk"/>
-            <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="clk"/>
             <CONNECTION INSTANCE="pong_axi_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">
@@ -1211,7 +1211,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="BOOT_ADDR_CUSTOM" VALUE="0x00000000"/>
-        <PARAMETER NAME="BOOT_MODE_SELECT" VALUE="0"/>
+        <PARAMETER NAME="BOOT_MODE_SELECT" VALUE="2"/>
         <PARAMETER NAME="CACHE_BLOCK_SIZE" VALUE="64"/>
         <PARAMETER NAME="CACHE_BURSTS_EN" VALUE="true"/>
         <PARAMETER NAME="CLOCK_FREQUENCY" VALUE="100000000"/>
@@ -1222,7 +1222,7 @@
         <PARAMETER NAME="DCACHE_EN" VALUE="false"/>
         <PARAMETER NAME="DCACHE_NUM_BLOCKS" VALUE="4"/>
         <PARAMETER NAME="DMEM_BASE" VALUE="0x80000000"/>
-        <PARAMETER NAME="DMEM_EN" VALUE="false"/>
+        <PARAMETER NAME="DMEM_EN" VALUE="true"/>
         <PARAMETER NAME="DMEM_OUTREG_EN" VALUE="false"/>
         <PARAMETER NAME="DMEM_SIZE" VALUE="8192"/>
         <PARAMETER NAME="DUAL_CORE_EN" VALUE="false"/>
@@ -1231,7 +1231,7 @@
         <PARAMETER NAME="ICACHE_EN" VALUE="false"/>
         <PARAMETER NAME="ICACHE_NUM_BLOCKS" VALUE="4"/>
         <PARAMETER NAME="IMEM_BASE" VALUE="0x00000000"/>
-        <PARAMETER NAME="IMEM_EN" VALUE="false"/>
+        <PARAMETER NAME="IMEM_EN" VALUE="true"/>
         <PARAMETER NAME="IMEM_OUTREG_EN" VALUE="false"/>
         <PARAMETER NAME="IMEM_SIZE" VALUE="16384"/>
         <PARAMETER NAME="IO_CFS_EN" VALUE="false"/>
@@ -1843,10 +1843,10 @@
         <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="resetn"/>
             <CONNECTION INSTANCE="main_smartconnect_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="pong_axi_0" PORT="rst_0_port_out"/>
             <CONNECTION INSTANCE="pong_axi_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
